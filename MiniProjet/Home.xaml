@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniProjet.Home" BackgroundImage="https://wallpaperaccess.com/full/2492815.jpg">
+  <ContentPage.Content>
+      <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="10" BackgroundColor="Transparent">
+            <Button Text="Magasin" x:Name="b"/>
+            <Button Text="voiture" x:Name="v"/>
+            <Button Text="iset rades" x:Name="isetr"/>
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

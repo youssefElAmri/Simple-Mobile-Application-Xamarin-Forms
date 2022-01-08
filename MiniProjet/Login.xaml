@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="10"
+             x:Class="MiniProjet.Login" BackgroundImage="https://wallpaperaccess.com/full/1586538.jpg">
+    
+  <ContentPage.Content >
+      <StackLayout VerticalOptions="Center" >
+            <Label Text="Login" TextColor="PaleVioletRed" FontSize="Title"  HorizontalTextAlignment="Center" Margin="0,0,0,105"/>
+
+            <Label Text="username" />
+            <Entry  x:Name="username"/>
+            <Label Text="password"/>
+            <Entry x:Name="password" IsPassword="True" />
+            <Button Text="sign in" x:Name="btn"> </Button>
+            <Button Text="SignUp" Clicked="signUp" Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

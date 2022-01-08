@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniProjet.Voituree" BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <CarouselView x:Name="cv">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackLayout>
+
+                            <Frame HasShadow="True"
+                                   BorderColor="White"
+                                   CornerRadius="5"
+                                   Margin="20"
+                                   HeightRequest="300"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Label Grid.Row="0" Grid.Column="1"  TextColor="Black" Text="{Binding name}" HorizontalOptions="Center" FontSize="Title"/>
+                                    <StackLayout>
+                                        <Image Grid.RowSpan="9" Grid.Column="0" Source="{Binding image}"  HeightRequest="370" WidthRequest="500"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </StackLayout>
+    
+   
+    </ContentPage.Content>
+</ContentPage>

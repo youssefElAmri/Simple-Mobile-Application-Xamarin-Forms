@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniProjet.Boutique" >
+    <MasterDetailPage.Master>
+        <ContentPage Title="catgeorie" >
+            <StackLayout>
+                <Label Text="Categorie" TextColor="DarkRed" FontSize="Title" />
+                <ListView x:Name="MyListCategories">
+                    <!--Built in Cells-->
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  Width="150"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label x:Name="nom" Grid.Row="0" Grid.Column="1" TextColor="DarkViolet" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="{Binding name}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding id}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage Title="produits" BackgroundColor="white" >
+            <StackLayout>
+                <Label Text="Products" TextColor="Orange" FontSize="Title"/>
+                <ListView x:Name="MyListProducts">
+                    <!--Built in Cells-->
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  Width="150"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="1" TextColor="DimGray" FontSize="Small"  Text="{Binding name}" HorizontalOptions="Center"/>
+                                    <Image Grid.Column="0" Source="{Binding image}"  HeightRequest="50" WidthRequest="70" HorizontalOptions="Start"/>
+                                    <Label Grid.Row="0" Grid.Column="1" TextColor="White" FontSize="Small" Text="{Binding price}" HorizontalOptions="Fill" Margin="0,0,10,0"/>
+                                    <Label Grid.Row="0" Grid.Column="1" TextColor="White" FontSize="Small" Text="{Binding qte}" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+                                </Grid>
+                                <ViewCell.ContextActions>
+                                    <MenuItem x:Name="btnAfficher"
+                                              Text="détail"
+                                              Clicked="btnAfficher_Clicked"
+                                              CommandParameter="{Binding .}"
+                                        />
+                                    <MenuItem x:Name="btnDelete"
+                                              Text="delete"
+                                              Clicked="btnDelete_Clicked"
+                                              CommandParameter="{Binding .}"                                        
+                                        />
+                                </ViewCell.ContextActions>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

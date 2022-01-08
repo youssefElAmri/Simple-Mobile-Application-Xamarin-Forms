@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniProjet.AjouterUser" BackgroundImageSource="https://i.pinimg.com/originals/50/00/c7/5000c78411deeb578a05f6fd55fb951b.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="créer un compte utilisateur" TextColor="DarkGreen" FontSize="Title" HorizontalTextAlignment="Center" Margin="0,20,0,50" />
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <EntryCell x:Name="username" Label="username" />
+                        <ViewCell>
+                            <Label>password</Label>
+                        </ViewCell>
+                        <ViewCell>
+                            <Entry  x:Name="password"  IsPassword="True"/> </ViewCell>
+                        <ViewCell>
+                            <Label>confirmer Password</Label>
+                        </ViewCell>
+                        <ViewCell>
+                            <Entry x:Name="confPassword" IsPassword="True" />
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button x:Name="btnAdd" Text="Ajouter" Clicked="btnAdd_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

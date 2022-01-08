@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniProjet.IsetRades" BackgroundColor="Black">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Technologies de l'informatique">
+        <StackLayout>
+            <Image HeightRequest="250" WidthRequest="350" Source="https://images4.content-hci.com/commimg/myhotcourses/blog/post/myhc_89683.jpg" />
+            <Label FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" Text="Le Département des Technologies de l'informatique a démarré en février 2003. Il regroupe des enseignants et des professionnels (vacataires) à la disposition des étudiants préparant un D.E.S.T (Diplôme des Études Supérieures de Technologie) ou une Licence appliquée."></Label>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Génie Civil">
+        <StackLayout>
+            <Image HeightRequest="250" WidthRequest="150" Source="https://www.istegroup.com/wp-content/uploads/2019/02/G%C3%A9nie-civil-et-g%C3%A9om%C3%A9canique-e1550742139971.jpg" />
+            <Label FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" Text="يقوم قسم الهندسة الكهربائية بتكوين فنيين ساميين في جميع المجالات الخاصة بالأنظمة الصّناعية التي تعتمد أساسا على الطاقة الكهربائية للإنتاج وتوفير مختلف الخدمات وذلك باكتساب جميع المهارات لبرمجتها، تسييرها، صيانتها ومراقبتها مع ضمان جميع آليات السّلامة المهنيّة وسلامة جميع معدّات ومكوّنات الأنظمة الكهربائيّة."></Label>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Génie Mécanique">
+        <StackLayout>
+            <Image HeightRequest="350" WidthRequest="150" Source="https://master-mecanique.formation.univ-lorraine.fr/files/2018/07/PHOTO-MECA-270x250@2x.jpg" />
+            <Label FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" Text="Le génie mécanique (ou l'ingénierie mécanique) désigne l'ensemble des connaissances liées à la mécanique, au sens physique (sciences des mouvements) et au sens technique (étude des mécanismes)."></Label>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
